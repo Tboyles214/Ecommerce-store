@@ -150,7 +150,20 @@ margin: 0 auto;
     position: relative;
 
 }
+#highlights:before,
+#highlights:after{
+    background: url('assets/wave.svg');
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    width: 101vw;
+    height: 12vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
 
+}
 #highlights:before{
     background: url('assets/wave.svg');
     content: "";
@@ -222,6 +235,55 @@ margin: 0 auto;
 /*Featurs*/
 
 #features{
-    height: 1000px;
+    padding-top: 8vw;
     background-color: rgb(115,66,214,0.1);
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book{
+    width:25%;
+    padding: 24px;
+}
+
+.book__img{
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: no-drop;
+}
+
+.book__img--wrapper{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+
+}
+
+.book__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings{
+    margin-bottom: 8px;
+    color: #fabf2a
+}
+
+.book__price--normal{
+    text-decoration: line-through;
+    padding-right: 8px;
+    color: #bfbfbf;
 }
